@@ -12,7 +12,8 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/') }}">
-                LaraBBS
+                RCS BBS
+                <!--仁爱菁英大学生论坛  -->
             </a>
         </div>
 
