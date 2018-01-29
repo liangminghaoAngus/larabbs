@@ -44,4 +44,8 @@ public function scopeRecent($query)
     // 按照创建时间排序
     return $query->orderBy('created_at', 'desc');
 }
+public function link($params = [])
+    {
+        return route('$topic->link()', array_merge([$this->id, $this->slug], $params));
+    }
 }
