@@ -22,10 +22,13 @@ class Kernel extends ConsoleKernel
      * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
      * @return void
      */
-    protected function schedule(Schedule $schedule)
+     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')
         //          ->hourly();
+
+        // 一小时执行一次『活跃用户』数据生成的命令
+        $schedule->command('larabbs:calculate-active-user')->hourly();
     }
 
     /**
