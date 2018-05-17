@@ -25,6 +25,20 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('sno') ? ' has-error' : '' }}">
+                            <label for="name" class="col-md-4 control-label">学号</label>
+
+                            <div class="col-md-6">
+                                <input id="sno" type="text" class="form-control" name="sno" value="{{ old('sno') }}" required autofocus>
+
+                                @if ($errors->has('sno'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('sno') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">邮箱地址</label>
 
