@@ -49,12 +49,15 @@ class RegisterController extends Controller
      {
          return Validator::make($data, [
              'name' => 'required|string|max:255',
+             'sno' => 'required|unique:users|max:255',
              'email' => 'required|string|email|max:255|unique:users',
              'password' => 'required|string|min:6|confirmed',
              'captcha' => 'required|captcha',
          ], [
              'captcha.required' => '验证码不能为空呦~',
              'captcha.captcha' => '验证码不对呦，再输一遍吧~',
+             'sno.required' => '学号不能为空呦~',
+             'sno.unique' => '这个学号已经注册过了哦',
          ]);
      }
 
@@ -68,6 +71,7 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
+            'sno' => $data['sno'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);

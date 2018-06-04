@@ -51,6 +51,10 @@ return [
             'title' => '邮箱',
         ],
 
+        'sno' => [
+            'title' => '学号',
+        ],
+
         'operation' => [
             'title'  => '管理',
             'sortable' => false,
@@ -61,6 +65,9 @@ return [
     'edit_fields' => [
         'name' => [
             'title' => '用户名',
+        ],
+        'sno' => [
+            'title' => '学号',
         ],
         'email' => [
             'title' => '邮箱',
@@ -100,6 +107,9 @@ return [
         ],
         'name' => [
             'title' => '用户名',
+        ],
+        'sno' => [
+            'title' => '学号',
         ],
         'email' => [
             'title' => '邮箱',

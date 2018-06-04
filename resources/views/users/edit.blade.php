@@ -23,6 +23,10 @@
                     <input class="form-control" type="text" name="name" id="name-field" value="{{ old('name', $user->name ) }}" />
                 </div>
                 <div class="form-group">
+                    <label for="name-field">学号</label>
+                    <input class="form-control" type="text" name="sno" id="sno-field" value="{{ old('sno', $user->sno ) }}" disabled="disabled"/>
+                </div>
+                <div class="form-group">
                     <label for="email-field">邮 箱</label>
                     <input class="form-control" type="text" name="email" id="email-field" value="{{ old('email', $user->email ) }}" />
                 </div>
